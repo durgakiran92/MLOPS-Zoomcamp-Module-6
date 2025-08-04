@@ -1,6 +1,7 @@
 # pylint: disable=duplicate-code
 
 import json
+
 import requests
 from deepdiff import DeepDiff
 
@@ -33,7 +34,7 @@ expected_response = {
 diff = DeepDiff(
     actual_response,
     expected_response,
-    significant_digits=1  # allows small rounding differences
+    significant_digits=1,  # allows small rounding differences
 )
 
 print(f'diff = {diff}')
