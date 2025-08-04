@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/34bf77175d7a4a9d8e8b96737d90b311/artifacts
+end_time: 1754317165045
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 34bf77175d7a4a9d8e8b96737d90b311
+run_name: useful-shrike-81
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754317165036
+status: 3
+tags: []
+user_id: codespace

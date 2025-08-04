@@ -1,0 +1,10 @@
+artifact_location: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/models/m-9f34e46588444a03880f12657d2de938/artifacts
+creation_timestamp: 1754316951469
+experiment_id: '0'
+last_updated_timestamp: 1754316955638
+model_id: m-9f34e46588444a03880f12657d2de938
+model_type: null
+name: model
+source_run_id: f3102cbb1d66451181eb9befad37c77d
+status: 2
+status_message: null

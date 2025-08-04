@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/e07abd02fde34173b52bd4a4b9b43d02/artifacts
+end_time: 1754317247275
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e07abd02fde34173b52bd4a4b9b43d02
+run_name: thoughtful-rook-499
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754317247263
+status: 3
+tags: []
+user_id: codespace

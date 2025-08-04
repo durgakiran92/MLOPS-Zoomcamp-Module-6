@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/8bed4bb59ee94d14915315d9a990625f/artifacts
+end_time: 1754317737193
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8bed4bb59ee94d14915315d9a990625f
+run_name: amazing-stag-585
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754317737184
+status: 3
+tags: []
+user_id: codespace

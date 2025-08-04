@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/5a0a94a03c234b57ba30ab84d77bd65d/artifacts
+end_time: 1754318232475
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5a0a94a03c234b57ba30ab84d77bd65d
+run_name: beautiful-jay-892
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754318229575
+status: 3
+tags: []
+user_id: codespace

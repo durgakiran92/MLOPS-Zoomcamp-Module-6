@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/387f2ce5c76f4ddca82103f6d18f83e7/artifacts
+end_time: 1754318148113
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 387f2ce5c76f4ddca82103f6d18f83e7
+run_name: unique-calf-803
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754318145028
+status: 3
+tags: []
+user_id: codespace

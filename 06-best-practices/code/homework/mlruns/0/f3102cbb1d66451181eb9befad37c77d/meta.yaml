@@ -1,0 +1,14 @@
+artifact_uri: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/f3102cbb1d66451181eb9befad37c77d/artifacts
+end_time: 1754316955643
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f3102cbb1d66451181eb9befad37c77d
+run_name: suave-shrew-375
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1754316951452
+status: 4
+tags: []
+user_id: codespace

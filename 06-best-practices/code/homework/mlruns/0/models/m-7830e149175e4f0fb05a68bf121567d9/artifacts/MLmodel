@@ -1,0 +1,22 @@
+artifact_path: file:///workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/mlruns/0/models/m-7830e149175e4f0fb05a68bf121567d9/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.1
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.0
+mlflow_version: 3.1.4
+model_id: m-7830e149175e4f0fb05a68bf121567d9
+model_size_bytes: 752
+model_uuid: m-7830e149175e4f0fb05a68bf121567d9
+prompts: null
+run_id: 387f2ce5c76f4ddca82103f6d18f83e7
+utc_time_created: '2025-08-04 14:35:45.046056'
