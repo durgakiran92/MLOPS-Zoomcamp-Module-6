@@ -1,0 +1,66 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code
+configfile: pyproject.toml
+plugins: anyio-4.9.0
+collected 1 item
+
+tests/test_batch.py F                                                    [100%]
+
+=================================== FAILURES ===================================
+______________________________ test_prepare_data _______________________________
+
+    def test_prepare_data():
+        data = [
+            (None, None, dt(1, 1), dt(1, 10)),        # 9 min ✅
+            (1, 1, dt(1, 2), dt(1, 10)),              # 8 min ✅
+            (1, None, dt(1, 2, 0), dt(1, 2, 59)),     # < 1 min ❌
+            (3, 4, dt(1, 2, 0), dt(2, 2, 1)),         # > 60 min ❌
+        ]
+    
+        columns = ['PULocationID', 'DOLocationID', 'tpep_pickup_datetime', 'tpep_dropoff_datetime']
+        df = pd.DataFrame(data, columns=columns)
+    
+        categorical = ['PULocationID', 'DOLocationID']
+        actual_df = prepare_data(df, categorical)
+    
+        # Only first two rows should be retained
+        expected_data = [
+            (None, None, dt(1, 1), dt(1, 10), 9.0),
+            (1, 1, dt(1, 2), dt(1, 10), 8.0),
+        ]
+        expected_columns = columns + ['duration']
+        expected_df = pd.DataFrame(expected_data, columns=expected_columns)
+    
+        # Check that DataFrames are equal (ignoring dtype differences)
+>       pd.testing.assert_frame_equal(actual_df.reset_index(drop=True), expected_df.reset_index(drop=True), check_dtype=False)
+
+tests/test_batch.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+pandas/_libs/testing.pyx:55: in pandas._libs.testing.assert_almost_equal
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   AssertionError: DataFrame.iloc[:, 0] (column name="PULocationID") are different
+E   
+E   DataFrame.iloc[:, 0] (column name="PULocationID") values are different (100.0 %)
+E   [index]: [0, 1]
+E   [left]:  [-1, 1]
+E   [right]: [nan, 1.0]
+E   At positional index 0, first diff: -1 != nan
+
+pandas/_libs/testing.pyx:173: AssertionError
+=============================== warnings summary ===============================
+homework/tests/test_batch.py::test_prepare_data
+  /workspaces/MLOPS-Zoomcamp-Module-6/06-best-practices/code/homework/batch.py:20: SettingWithCopyWarning: 
+  A value is trying to be set on a copy of a slice from a DataFrame.
+  Try using .loc[row_indexer,col_indexer] = value instead
+  
+  See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+    df[categorical] = df[categorical].fillna(-1).astype('int').astype('str')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_batch.py::test_prepare_data - AssertionError: DataFrame.ilo...
+========================= 1 failed, 1 warning in 1.21s =========================
